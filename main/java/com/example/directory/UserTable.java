@@ -24,15 +24,16 @@ public class UserTable {
 
     public UserTable(SQLiteDatabase sqLiteDatabase){
         try {
-            sqLiteDatabase.execSQL("CREATE TABLE " + tableName + "(" + "" +
-                    "" + Firstname + " VARCHAR(30)," + "" + Lastname + " VARCHAR(30)," + "" + cus_id + " INTEGER(40) PRIMARY KEY AUTOINCREMENT ," + "" + Birthdate + " VARCHAR(30)," + "" + Branch + " VARCHAR(30)," + "" + Mobile + " VARCHAR(30)," +
-                    "" + "" + Gender + " VARCHAR(30)," + "" + Address + " VARCHAR(30)," + "" + City + " VARCHAR(30)," + "" + Pincode + " VARCHAR(30)," + "" + Email + " VARCHAR(30)," + "" + Password + " VARCHAR(30));");
+            sqLiteDatabase.execSQL("CREATE TABLE " + tableName + "("  +
+                    "" + Firstname + " VARCHAR(30)," + Lastname + " VARCHAR(30)," + cus_id + " INTEGER(40) PRIMARY KEY AUTOINCREMENT ,"  + Birthdate + " VARCHAR(30)," + "" + Branch + " VARCHAR(30)," + "" + Mobile + " VARCHAR(30)," +
+                    "" + Gender + " VARCHAR(30)," + "" + Address + " VARCHAR(30),"  + City + " VARCHAR(30)," + Pincode + " VARCHAR(30)," + Email + " VARCHAR(30));
 
 
         }
         catch (Exception e){
            e.printStackTrace();
       }
+    }
         //        sqLiteDatabase.execSQL("CREATE TABLE" + tableName + "(" + );
 //        try {
 //
@@ -48,7 +49,7 @@ public class UserTable {
 //        }catch (Exception e){
 //            e.printStackTrace();
 //        }
-    }
+    
     public UserTable()
     {
 
