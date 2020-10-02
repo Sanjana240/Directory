@@ -128,7 +128,7 @@ public class SQLitehHelper extends SQLiteOpenHelper {
 //        return sqLiteDatabase.rawQuery("select * from "+userTable.getTableName())
 //    }
 
-    public Cursor getDataFromUser()
+  public Cursor getDataFromUser()
     {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         UserTable userTable = new UserTable();
@@ -136,8 +136,8 @@ public class SQLitehHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
-    public SQLiteDatabase getMyWritableDb(){// geting permission to write database
-        if ((myWritableDb == null)) {
+   public SQLiteDatabase getMyWritableDb(){// geting permission to write database
+        if ((myWritableDb == null) || (!myWritableDb.isOpen())) {
             myWritableDb = this.getWritableDatabase();
         }
 
