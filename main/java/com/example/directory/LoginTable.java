@@ -9,7 +9,7 @@ public class LoginTable {
     private String Username = "username";
     private String Password = "password";
     public LoginTable(SQLiteDatabase sqLiteDatabase){
-        sqLiteDatabase.execSQL("CREATE TABLE "+Table_Name+"("+""+ ""+Username+" VARCHAR(30) PRIMARY KEY,"+""+Password+" VARCHAR(30)"+")");
+        sqLiteDatabase.execSQL("CREATE TABLE "+Table_Name+"("+Username+" VARCHAR(30) PRIMARY KEY,+ "Password+" VARCHAR(30)"+")");
     }
     public LoginTable()
     {
