@@ -83,10 +83,12 @@ public class Registration extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker datePicker, int year, int month, int day) {
                 month = month + 1;
+                Log.d(TAG, "onDateSet:mm/dd/yy" + month + "-" + day + "-" + year);
+
+
                 String date = month + "-" + day + "-" +year;
                 textView.setText(date);
             }
-
         };
 
     }
