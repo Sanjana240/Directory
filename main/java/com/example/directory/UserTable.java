@@ -22,7 +22,7 @@ public class UserTable {
     private String Email = "email";
     private String Password = "password";
 
-   public UserTable(SQLiteDatabase sqLiteDatabase){
+  public UserTable(SQLiteDatabase sqLiteDatabase){
         try {
             sqLiteDatabase.execSQL("CREATE TABLE " + tableName + "(" + "" +
                     "" + Firstname + " VARCHAR(30)," + "" + Lastname + " VARCHAR(30)," + "" + cus_id + " INTEGER(40) PRIMARY KEY AUTOINCREMENT ," + "" + Birthdate + " VARCHAR(30)," + "" + Branch + " VARCHAR(30)," + "" + Mobile + " VARCHAR(30)," +
