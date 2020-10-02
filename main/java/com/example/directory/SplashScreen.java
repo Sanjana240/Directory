@@ -20,17 +20,20 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
         textView = findViewById(R.id.mb);
         imageView = findViewById(R.id.proimg);
-        Animation myanim = AnimationUtils.loadAnimation(R.anim.mytransition);
+        Animation myanim = AnimationUtils.loadAnimation(this,R.anim.mytransition);
         textView.startAnimation(myanim);
         imageView.startAnimation(myanim);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         new Handler().postDelayed(new Runnable(){
             public void run()
             {
-                Intent intent = new Intent(MainActivity.class);
+                Intent intent = new Intent(SplashScreen.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
         },SPLASH_TIME_OUT);
     }
+
 }
